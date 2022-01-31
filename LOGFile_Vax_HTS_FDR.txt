@@ -1,0 +1,264 @@
+Server job started at Thursday, November 25, 2021 6:31:02 AM
+Server version is 11.2.0.7
+Mono version is 4.0.4
+UserID: olivia.alder@qiagen.com
+Script used: 
+Begin DESeq2Test /Namespace=NgsLib /RunOnServer=True;
+Project Rima;
+Data Rima\\Table.Data;
+Class PatientID,TimePoint;
+Model  ~ PatientID + TimePoint;
+DESeqGLMContrastTest "TimePoint => Day21 vs BL[TimePoint]Day21, 1, BL, -1" /Estimates=True /FoldChanges=True /RawPValues=True /AdjustedPValues=True /GenerateList=False /SplitList=False /Divisor=1;
+DESeqGLMContrastTest "TimePoint => Day22 vs BL[TimePoint]Day22, 1, BL, -1" /Estimates=True /FoldChanges=True /RawPValues=True /AdjustedPValues=True /GenerateList=False /SplitList=False /Divisor=1;
+DESeqGLMContrastTest "TimePoint => Day22.23 vs BL[TimePoint]Day22.23, 1, BL, -1" /Estimates=True /FoldChanges=True /RawPValues=True /AdjustedPValues=True /GenerateList=False /SplitList=False /Divisor=1;
+DESeqGLMContrastTest "TimePoint => Day28 vs BL[TimePoint]Day28, 1, BL, -1" /Estimates=True /FoldChanges=True /RawPValues=True /AdjustedPValues=True /GenerateList=False /SplitList=False /Divisor=1;
+DESeqGLMContrastTest "TimePoint => Day7 vs BL[TimePoint]Day7, 1, BL, -1" /Estimates=True /FoldChanges=True /RawPValues=True /AdjustedPValues=True /GenerateList=False /SplitList=False /Divisor=1;
+Options /Multiplicity=FDR_BH /AlphaLevel=0.05 /FitType=parametric /EnableSignedFoldChange=True /ExportDispersionTable=True /ExportWaldTable=False /ExportOutlier=True /ExportGroupMean=True /ExportContrastVectorTable=False /ReOrderColumnFactors=True /ThreadNumber=12 /ExportMaxGroupMean=True /IndependentFiltering=True /MinReplicatesForReplace=7 /PFilterAlpha=0.1 /ExportNormalizedCounts=False;
+Output patient_id_in_model_fdr_bh;
+End;
+
+[00:00:00] Calling /opt/mono-4.0.4/bin/mono "/opt/arrayserver/server443/ojob.exe" "/data/arrayserver443/Omicsoft/ClusterScripts/ShellJobs/2021_11_25_a742bac23ecaa8e6.sjin" "/data/arrayserver443/Omicsoft/ClusterScripts/ShellJobs/2021_11_25_a742bac23ecaa8e6.sjout" "/data/arrayserver443/Omicsoft/ClusterScripts/ShellJobs/2021_11_25_a742bac23ecaa8e6.sjlog"
+[00:00:00] Array Server Version=11.2.0.7
+[00:00:00] UserID=olivia.alder@qiagen.com
+[00:00:00] ProjectID=Rima
+[00:00:00] Running ojob.exe from server with cloud support...
+[00:00:01] MasterServer=tcp://localhost:443
+[00:00:01] AnalyticServer=
+[00:00:01] Loading project: Rima on the server...
+[00:00:01] Loading items...
+[00:00:01] Loading attachments...
+[00:00:01] Loading data...
+[00:00:01] Setting current user ID...
+[00:00:01] Setting job ID...
+[00:00:01] Loading data from /userdata/ServerProjects/olivia.alder@qiagen.com/Rima/Table.Data.osobj...
+[00:00:01] Setting project...
+[00:00:01] ----------Started ProcDESeq2Test----------
+[00:00:01] Starting DESeq2 GLM analysis (based on v1.10.1 with standard model matrix) ...
+[00:00:01] Observation used in the analysis:
+[00:00:01] PID2053_BL
+[00:00:01] PID2053_Day1.2
+[00:00:01] PID2053_Day7
+[00:00:01] PID2053_Day21
+[00:00:01] PID2053_Day22.23
+[00:00:01] PID2053_Day28
+[00:00:01] PID2028_BL
+[00:00:01] PID2028_Day1.2
+[00:00:01] PID2028_Day7
+[00:00:01] PID2028_Day21
+[00:00:01] PID2028_Day22.23
+[00:00:01] PID2028_Day28
+[00:00:01] PID2013_BL
+[00:00:01] PID2013_Day1.2
+[00:00:01] PID2013_Day7
+[00:00:01] PID2013_Day21
+[00:00:01] PID2013_Day28
+[00:00:01] PID2045_BL
+[00:00:01] PID2045_Day1.2
+[00:00:01] PID2045_Day7
+[00:00:01] PID2045_Day21
+[00:00:01] PID2045_Day22.23
+[00:00:01] PID2045_Day28
+[00:00:01] PID2018_BL
+[00:00:01] PID2018_Day1.2
+[00:00:01] PID2018_Day21
+[00:00:01] PID2018_Day22.23
+[00:00:01] PID2018_Day28
+[00:00:01] PID2042_BL
+[00:00:01] PID2042_Day1.2
+[00:00:01] PID2042_Day7
+[00:00:01] PID2042_Day21
+[00:00:01] PID2042_Day22.23
+[00:00:01] PID2042_Day28
+[00:00:01] PID2007_BL
+[00:00:01] PID2007_Day1.2
+[00:00:01] PID2007_Day7
+[00:00:01] PID2007_Day21
+[00:00:01] PID2007_Day22.23
+[00:00:01] PID2007_Day28
+[00:00:01] PID2027_BL
+[00:00:01] PID2027_Day1.2
+[00:00:01] PID2027_Day7
+[00:00:01] PID2027_Day21
+[00:00:01] PID2027_Day22.23
+[00:00:01] PID2027_Day28
+[00:00:01] PID2044_BL
+[00:00:01] PID2044_Day1.2
+[00:00:01] PID2044_Day7
+[00:00:01] PID2044_Day21
+[00:00:01] PID2044_Day22.23
+[00:00:01] PID2044_Day28
+[00:00:01] PID2048_BL
+[00:00:01] PID2048_Day1.2
+[00:00:01] PID2048_Day7
+[00:00:01] PID2048_Day21
+[00:00:01] PID2048_Day22.23
+[00:00:01] PID2048_Day28
+[00:00:01] PID2012_BL
+[00:00:01] PID2012_Day7
+[00:00:01] PID2012_Day21
+[00:00:01] PID2012_Day22.23
+[00:00:01] PID2012_Day28
+[00:00:01] PID2052_BL
+[00:00:01] PID2052_Day1.2
+[00:00:01] PID2052_Day7
+[00:00:01] PID2052_Day21
+[00:00:01] PID2052_Day22.23
+[00:00:01] PID2052_Day28
+[00:00:01] PID2040_BL
+[00:00:01] PID2040_Day1.2
+[00:00:01] PID2040_Day7
+[00:00:01] PID2040_Day21
+[00:00:01] PID2040_Day22.23
+[00:00:01] PID2040_Day28
+[00:00:01] PID2047_BL
+[00:00:01] PID2047_Day1
+[00:00:01] PID2047_Day2
+[00:00:01] PID2047_Day7
+[00:00:01] PID2047_Day21
+[00:00:01] PID2047_Day22.23
+[00:00:01] PID2047_Day28
+[00:00:01] PID2034_BL
+[00:00:01] PID2034_Day7
+[00:00:01] PID2034_Day21
+[00:00:01] PID2034_Day22.23
+[00:00:01] PID2034_Day28
+[00:00:01] PID2056_BL
+[00:00:01] PID2056_Day1.2
+[00:00:01] PID2056_Day7
+[00:00:01] PID2056_Day21
+[00:00:01] PID2056_Day22.23
+[00:00:01] PID2056_Day28
+[00:00:01] PID2009_BL
+[00:00:01] PID2009_Day1.2
+[00:00:01] PID2009_Day7
+[00:00:01] PID2009_Day21
+[00:00:01] PID2030_BL
+[00:00:01] PID2030_Day1.2
+[00:00:01] PID2030_Day7
+[00:00:01] PID2030_Day22.23
+[00:00:01] PID2030_Day28
+[00:00:01] PID2020_BL
+[00:00:01] PID2020_Day1.2
+[00:00:01] PID2020_Day7
+[00:00:01] PID2020_Day21
+[00:00:01] PID2020_Day22.23
+[00:00:01] PID2020_Day28
+[00:00:01] PID2054_BL
+[00:00:01] PID2054_Day1.2
+[00:00:01] PID2054_Day7
+[00:00:01] PID2054_Day21
+[00:00:01] PID2054_Day22.23
+[00:00:01] PID2054_Day28
+[00:00:01] PID2011_BL
+[00:00:01] PID2011_Day1.2
+[00:00:01] PID2011_Day7
+[00:00:01] PID2011_Day21
+[00:00:01] PID2011_Day22.23
+[00:00:01] PID2051_BL
+[00:00:01] PID2051_Day1
+[00:00:01] PID2051_Day2
+[00:00:01] PID2051_Day7
+[00:00:01] PID2051_Day21
+[00:00:01] PID2051_Day22.23
+[00:00:01] PID2051_Day28
+[00:00:01] PID2055_BL
+[00:00:01] PID2055_Day1.2
+[00:00:01] PID2055_Day7
+[00:00:01] PID2055_Day21
+[00:00:01] PID2055_Day22.23
+[00:00:01] PID2055_Day28
+[00:00:01] PID2031_BL
+[00:00:01] PID2031_Day1.2
+[00:00:01] PID2031_Day7
+[00:00:01] PID2031_Day21
+[00:00:01] PID2031_Day22.23
+[00:00:01] PID2031_Day28
+[00:00:01] PID2050_BL
+[00:00:01] PID2050_Day7
+[00:00:01] PID2050_Day21
+[00:00:01] PID2050_Day22.23
+[00:00:01] PID2050_Day28
+[00:00:01] PID2049_BL
+[00:00:01] PID2049_Day1
+[00:00:01] PID2049_Day2
+[00:00:01] PID2049_Day7
+[00:00:01] PID2049_Day21
+[00:00:01] PID2049_Day22.23
+[00:00:01] PID2049_Day28
+[00:00:01] PID2036_BL
+[00:00:01] PID2036_Day1.2
+[00:00:01] PID2036_Day7
+[00:00:01] PID2036_Day21
+[00:00:01] PID2036_Day22.23
+[00:00:01] PID2036_Day28
+[00:00:01] PID2038_BL
+[00:00:01] PID2038_Day7
+[00:00:01] PID2038_Day21
+[00:00:01] PID2038_Day22
+[00:00:01] PID2038_Day28
+[00:00:01] PID2043_BL
+[00:00:01] PID2043_Day1.2
+[00:00:01] PID2043_Day7
+[00:00:01] PID2043_Day21
+[00:00:01] PID2043_Day22.23
+[00:00:01] PID2043_Day28
+[00:00:01] PID2000_BL
+[00:00:01] PID2000_Day1.2
+[00:00:01] PID2000_Day7
+[00:00:01] PID2000_Day21
+[00:00:01] PID2000_Day22.23
+[00:00:01] PID2000_Day28
+[00:00:01] PID2001_BL
+[00:00:01] PID2001_Day1.2
+[00:00:01] PID2001_Day7
+[00:00:01] PID2001_Day21
+[00:00:01] PID2001_Day22.23
+[00:00:01] PID2001_Day28
+[00:00:01] PID2046_BL
+[00:00:01] PID2046_Day1.2
+[00:00:01] PID2046_Day7
+[00:00:01] PID2046_Day21
+[00:00:01] PID2046_Day22.23
+[00:00:01] PID2046_Day28
+[00:00:02] Normalizing the data ...
+[00:00:02] Performing LogGeometricMean normalization ...
+[00:00:02] Estimate Dispersion ...
+[00:00:02] Estimate DispersionsGeneEst ...
+[00:30:37] Estimate DispersionFit ...
+[00:30:37] Estimate DispersionMap ...
+[00:44:31] Compute Wald statistics ...
+[01:42:14] Compute Constrast for : TimePoint => Day21 vs BL[TimePoint]Day21, 1, BL, -1
+[01:42:14] Generate +TimePoint.Day21
+[01:43:16] Compute Constrast for : TimePoint => Day22 vs BL[TimePoint]Day22, 1, BL, -1
+[01:43:16] Generate +TimePoint.Day22
+[01:44:17] Compute Constrast for : TimePoint => Day22.23 vs BL[TimePoint]Day22.23, 1, BL, -1
+[01:44:17] Generate +TimePoint.Day22.23
+[01:45:17] Compute Constrast for : TimePoint => Day28 vs BL[TimePoint]Day28, 1, BL, -1
+[01:45:17] Generate +TimePoint.Day28
+[01:46:18] Compute Constrast for : TimePoint => Day7 vs BL[TimePoint]Day7, 1, BL, -1
+[01:46:18] Generate +TimePoint.Day7
+[01:47:18] Check outlier ...
+[01:47:18] Export Outputs ...
+[01:47:18] ----------Finished ProcDESeq2Test----------
+[01:47:18] Saving project: Rima on the server...
+[01:47:18] Starting to save project (JobIndex=4)
+[01:47:18] Saving properties...
+[01:47:18] Saving audit trails...
+[01:47:18] Saving items (0)...
+[01:47:18] Saving attachments (0)...
+[01:47:18] Saving data...
+[01:47:19] Saving data property and visualization modifications...
+[01:47:19] Loading items...
+[01:47:19] Loading attachments...
+[01:47:19] Loading data...
+[01:47:19] Loading items...
+[01:47:19] Loading attachments...
+[01:47:19] Loading data...
+[01:47:19] Applying modifications for data properties and visualizations...
+[01:47:19] Saving properties...
+[01:47:19] Saving audit trails...
+[01:47:19] Saving items...
+[01:47:19] Saving attachments...
+[01:47:19] Saving data...
+[01:47:19] Finished saving project (JobIndex=4)
+[01:47:19] Job: Rima was finished at Thursday, November 25, 2021 8:18:22 AM
